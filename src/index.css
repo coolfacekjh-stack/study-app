@@ -1,0 +1,13 @@
+/* index.css — Vite 기본 스타일 초기화 */
+/* 실제 스타일은 App.css에서 관리합니다. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
