@@ -59,6 +59,7 @@ function App() {
           onAdd={addStudy}
           onUpdate={handleUpdate}
           editTarget={editTarget}
+          onCancel={() => setEditTarget(null)}
         />
         <StudyList
           studies={studies}

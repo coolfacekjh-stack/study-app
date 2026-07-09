@@ -11,7 +11,7 @@ const initialForm = {
   memo: '',      // 메모
 }
 
-function StudyForm({ onAdd, onUpdate, editTarget }) {
+function StudyForm({ onAdd, onUpdate, editTarget, onCancel }) {
   const [form, setForm] = useState(initialForm)
   const [errors, setErrors] = useState({}) // 유효성 검사 에러 메시지
 
@@ -140,6 +140,17 @@ function StudyForm({ onAdd, onUpdate, editTarget }) {
         <button type="submit" className="btn-primary">
           {editTarget ? '✅ 수정 완료' : '💾 저장'}
         </button>
+
+        {/* 수정 모드일 때만 취소 버튼 표시 */}
+        {editTarget && (
+          <button
+            type="button"
+            className="btn-cancel"
+            onClick={onCancel}
+          >
+            ✖ 취소
+          </button>
+        )}
       </form>
     </section>
   )
