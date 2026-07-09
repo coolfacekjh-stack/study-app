@@ -17,6 +17,9 @@ dist-ssr
 .env.local
 .env.production
 
+# 이전 git 디렉토리
+.git_disabled/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
